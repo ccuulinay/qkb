@@ -1,0 +1,11 @@
+project: qkb-demo
+runtime:
+  python: "3.12"
+  memory_mb: 512
+features:
+  search:
+    enabled: true
+    backend: sqlite-fts5
+  rerank:
+    enabled: false
+    notes: enable when llm_provider is configured

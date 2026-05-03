@@ -1,0 +1,12 @@
+{
+  "service": "billing-api",
+  "owners": ["payments-team"],
+  "endpoints": [
+    {"method": "POST", "path": "/charge", "rate_limit": "100/min"},
+    {"method": "GET", "path": "/invoice/:id", "rate_limit": "300/min"}
+  ],
+  "dependencies": {
+    "postgres": "primary",
+    "redis": "cache"
+  }
+}

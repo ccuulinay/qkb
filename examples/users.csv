@@ -1,0 +1,6 @@
+user_id,name,role,team
+1,Alice,engineer,platform
+2,Bob,manager,platform
+3,Carol,engineer,growth
+4,Dave,designer,growth
+5,Eve,engineer,security
