@@ -4,11 +4,21 @@ A small CLI for ingesting and querying local knowledge files (markdown, plain te
 
 ## Install
 
-Requires Python 3.12+ and [uv](https://github.com/astral-sh/uv).
+Requires Python 3.12+.
+
+### From PyPI
 
 ```bash
-git clone <this-repo>
-cd qkb_trial
+pip install qkb
+# or, with uv:
+uv tool install qkb
+```
+
+### From source
+
+```bash
+git clone https://github.com/ccuulinay/qkb
+cd qkb
 uv sync
 uv pip install -e .
 ```
