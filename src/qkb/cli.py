@@ -2,6 +2,7 @@ import json as _json
 import sqlite3
 import tomllib
 from pathlib import Path
+from typing import Optional
 
 import httpx
 import typer
@@ -184,7 +185,7 @@ def ingest(
 
 @app.command("list")
 def list_docs(
-    fmt: str | None = typer.Option(None, "--format", help="Filter by format (md/txt/json/yaml/csv)."),
+    fmt: Optional[str] = typer.Option(None, "--format", help="Filter by format (md/txt/json/yaml/csv)."),
     as_json: bool = typer.Option(False, "--json"),
 ) -> None:
     """List ingested documents."""
@@ -270,7 +271,7 @@ def delete(target: str) -> None:
 
 @app.command()
 def reindex(
-    path: Path | None = typer.Argument(None, help="Optional file or dir to reindex; default: all known docs."),
+    path: Optional[Path] = typer.Argument(None, help="Optional file or dir to reindex; default: all known docs."),
     force: bool = typer.Option(False, "--force"),
 ) -> None:
     """Re-process documents whose content has changed (or all with --force)."""
